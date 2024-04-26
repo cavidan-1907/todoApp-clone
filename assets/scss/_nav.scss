@@ -1,0 +1,46 @@
+nav{
+    width: 100%;
+    .nav{
+       @include between;
+       width: 100%;
+       padding: 32px;
+       .left{
+        color: $color1;
+        font-size: 25px;
+        font-weight: 700;
+        
+        i{
+            background-color: $color1;
+            color: #fff;
+            padding: 10px;
+            font-size: 20px;
+            margin: 0 10px;
+        }
+       }
+       .center{
+        @include center;
+        gap: 10px;
+        li{
+            a{
+                color: #000;
+                font-size: 20px;
+            }
+        }
+       }
+       .right{
+      @include center;
+      gap: 30px;
+      a{
+        color: #000;
+        font-size: 20px;
+      }
+      button{
+        background-color: $color1;
+        color: #fff;
+        padding: 7px 8px;
+        font-size: 16px;
+        border-radius: 10px;
+      }
+       }
+    }
+}

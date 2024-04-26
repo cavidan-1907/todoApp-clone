@@ -1,12 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: poppins, sans-serif;
+}
+
+body {
+  background-color: #fefdfc;
+}
+
+i {
+  cursor: pointer;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1300px;
   width: 100%;
   margin: 0 auto;
   padding: 0 32px;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+span {
+  cursor: pointer;
+}
+
+button, input {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+img, i {
+  cursor: pointer;
+}
+
+nav {
+  width: 100%;
+}
+nav .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 32px;
+}
+nav .nav .left {
+  color: #de483a;
+  font-size: 25px;
+  font-weight: 700;
+}
+nav .nav .left i {
+  background-color: #de483a;
+  color: #fff;
+  padding: 10px;
+  font-size: 20px;
+  margin: 0 10px;
+}
+nav .nav .center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+nav .nav .center li a {
+  color: #000;
+  font-size: 20px;
+}
+nav .nav .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+nav .nav .right a {
+  color: #000;
+  font-size: 20px;
+}
+nav .nav .right button {
+  background-color: #de483a;
+  color: #fff;
+  padding: 7px 8px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.section1 {
+  width: 100%;
+  padding-block: 50px;
+}
+.section1 .section11 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.section1 .section11 .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 30px;
+  width: 50%;
+}
+.section1 .section11 .text h1 {
+  font-size: 45px;
+}
+.section1 .section11 .text p {
+  font-size: 22px;
+  color: #676561;
+}
+.section1 .section11 .text button {
+  background-color: #de483a;
+  color: #fff;
+  padding: 7px 8px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.section2 {
+  width: 100%;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.section2 .container img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }/*# sourceMappingURL=style.css.map */
