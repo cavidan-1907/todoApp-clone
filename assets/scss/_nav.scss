@@ -1,46 +1,177 @@
 nav{
-    width: 100%;
-    .nav{
-       @include between;
-       width: 100%;
-       padding: 32px;
-       .left{
-        color: $color1;
-        font-size: 25px;
-        font-weight: 700;
-        
-        i{
-            background-color: $color1;
-            color: #fff;
-            padding: 10px;
-            font-size: 20px;
-            margin: 0 10px;
-        }
-       }
-       .center{
-        @include center;
-        gap: 10px;
-        li{
-            a{
-                color: #000;
-                font-size: 20px;
-            }
-        }
-       }
-       .right{
+  width: 100%;
+  .nav{
+     @include between;
+     width: 100%;
+     padding: 32px;
+     .bi-list{
+      font-size: 30px;
+      color: $color1;
+      font-weight: 500;
+      display: none;
+
+     }
+     .left{
+      color: $color1;
+      font-size: 20px;
+      font-weight: 700;
+      white-space: nowrap;
+      i{
+          background-color: $color1;
+          color: #fff;
+          padding: 4px;
+          border-radius: 4px;
+          font-size: 20px;
+          margin: 0 10px;
+      }
+     }
+     .center{
       @include center;
-      gap: 30px;
-      a{
-        color: #000;
-        font-size: 20px;
+      gap: 10px;
+      li{
+          a{
+              color: #000;
+              font-size: 20px;
+              white-space: nowrap;
+              padding: 4px;
+              border-radius: 5px;
+              transition: all 0.5s ease;
+              &:hover{
+                background-color: rgb(209, 204, 204)
+              }
+          }
       }
-      button{
-        background-color: $color1;
-        color: #fff;
-        padding: 7px 8px;
-        font-size: 16px;
-        border-radius: 10px;
-      }
-       }
+     }
+     .right{
+    @include center;
+    gap: 30px;
+    a{
+      color: #000;
+      font-size: 20px;
+      white-space: nowrap;
     }
+    button{
+      background-color: $color1;
+      color: #fff;
+      padding: 7px 8px;
+      font-size: 16px;
+      border-radius: 10px;
+      transition: all 0.5s ease;
+            filter: grayscale(0%);
+            &:hover{
+                filter: grayscale(30%);
+            }
+    }
+     }
+  }
+}
+@media screen and (max-width:850px){
+nav{
+.nav{
+  .right{
+    display: none;
+  }
+  .bi-list{
+    display: block;
+  }
+}
+}
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: $color1;
+  padding: 20px;
+  transition: left 0.4s ease;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.menu .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.menu .top div {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.menu .top div i {
+color: #ddd;
+
+  background-color: $color1;
+  padding: 10px;
+  font-size: 20px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu .top div i:hover {
+  background-color: #fff;
+  color: #ff7f50;
+}
+
+.menu .center2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu .center2 li a {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu .center2 li a:hover {
+  color: #ddd;
+}
+
+.menu .bot {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu .bot a {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu .bot button {
+  background-color: #fff;
+  color: #de483a;
+  padding: 7px 8px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu .bot button:hover {
+  background-color: #ddd;
+}
+
+.menu .bi-x {
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menu .bi-x:hover {
+  color: #ff7f50;
 }
